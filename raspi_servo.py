@@ -2,8 +2,8 @@ import pigpio
 import sys
 
 SERVO_PIN = 18
-duty_min = 125
-duty_max = 160
+duty_min = 1250
+duty_max = 1600
 
 param = sys.argv
 duty = int(param[1])

@@ -1,7 +1,7 @@
 import pigpio
 import sys
 
-servo_pin = 18
+SERVO_PIN = 18
 duty_min = 125
 duty_max = 160
 
@@ -14,6 +14,6 @@ elif (duty > duty_max):
 
 pi = pigpio.pi()
 
-pi.set_servo_pulsewidth(servo_pin, duty)
+pi.set_servo_pulsewidth(SERVO_PIN, duty)
 
 pi.stop()

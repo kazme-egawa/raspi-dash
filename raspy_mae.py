@@ -1,18 +1,18 @@
 import pigpio
 
-pwm_pin = [23, 24]
-freq = 100
-range = 255
+PWM_PIN = [23, 24]
+FREQ = 100
+RANGE = 255
 
 pi = pigpio.pi()
 
 for i in range(2):
-    pi.set_mode(pwm_pin[i], pi.gpio.OUTPUT)
-    pi.set_PWM_frequency(pwm_pin[i], freq)
-    pi.set_PWM_range(pwm_pin[i], range)
+    pi.set_mode(PWM_PIN[i], pi.gpio.OUTPUT)
+    pi.set_PWM_frequency(PWM_PIN[i], FREQ)
+    pi.set_PWM_range(PWM_PIN[i], RANGE)
 
-mae = pi.get_PWM_dutycycle(pwm_pin[0])
-ushiro = pi.get_PWM_dutycycle(pwm_pin[1])
+mae = pi.get_PWM_dutycycle(PWM_PIN[0])
+ushiro = pi.get_PWM_dutycycle(PWM_PIN[1])
 
 if (ushiro == 0):
     mae += 50
@@ -25,5 +25,5 @@ else:
         ushiro = 0
 
 
-pi.set_PWM_dutycycle(pwm_pin[0], mae)
-pi.set_PWM_dutycycle(pwm_pin[1], ushiro)
+pi.set_PWM_dutycycle(PWM_PIN[0], mae)
+pi.set_PWM_dutycycle(PWM_PIN[1], ushiro)

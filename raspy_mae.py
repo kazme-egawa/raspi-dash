@@ -7,7 +7,7 @@ RANGE = 255
 pi = pigpio.pi()
 
 for i in range(2):
-    pi.set_mode(PWM_PIN[i], pi.gpio.OUTPUT)
+    pi.set_mode(PWM_PIN[i], pigpio.OUTPUT)
     pi.set_PWM_frequency(PWM_PIN[i], FREQ)
     pi.set_PWM_range(PWM_PIN[i], RANGE)
 

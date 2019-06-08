@@ -1,8 +1,8 @@
 import pigpio
 
 SERVO_PIN = 18
-duty_min = 125
-duty_max = 160
+duty_min = 1250
+duty_max = 1600
 
 pi = pigpio.pi()
 duty = pi.get_servo_pulsewidth(SERVO_PIN)

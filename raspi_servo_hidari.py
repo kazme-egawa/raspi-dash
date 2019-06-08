@@ -6,7 +6,7 @@ duty_max = 1600
 
 pi = pigpio.pi()
 duty = pi.get_servo_pulsewidth(SERVO_PIN)
-duty -= 5
+duty -= 30
 
 if (duty < duty_min):
     duty = duty_min
